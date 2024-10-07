@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding and Moving Hearts</title>
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #CEB888; /* Light background for contrast */
+        }
+
+        @keyframes slide {
+            from { left: 0; }
+            to { left: 80%; }
+        }
+
+        .sliding_heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            background-image: url('purdue.png'); /* Replace with the correct path */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-duration: 3s;
+            animation-name: slide;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moving {
+            0%   { background-color: #FFB0AA; left: 10%; top: 10%; }
+            25%  { background-color: #E89BB0; left: 20%; top: 20%; }
+            50%  { background-color: #FFB7EF; left: 40%; top: 40%; }
+            75%  { background-color: #DD9BE8; left: 80%; top: 80%; }
+            100% { background-color: #DBAAFF; left: 0; top: 0; }
+        }
+
+        .moving_heart {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            background-image: url('purdue.png'); /* Replace with the correct path */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-duration: 3s;
+            animation-name: moving;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="sliding_heart"></div>
+    <div class="moving_heart"></div>
+</body>
+</html>
